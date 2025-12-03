@@ -1,29 +1,48 @@
 {
-  "name": "client-server-boundary-checker",
-  "version": "0.1.0",
+  "name": "client-server-boundary-checker-premium",
+  "version": "1.0.0",
   "private": true,
+  "description": "Premium Next.js Client/Server Boundary Checker with multi-step analysis pipeline, batch processing, and analytics",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "db:migrate": "prisma migrate dev",
+    "db:reset": "prisma migrate reset"
   },
   "dependencies": {
     "next": "^14.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "openai": "^4.28.0",
-    "uuid": "^9.0.0"
+    "@prisma/client": "^5.10.0",
+    "prismjs": "^1.29.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.1",
+    "class-variance-authority": "^0.7.0",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-slider": "^1.1.2",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "recharts": "^2.12.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "@types/uuid": "^9.0.0",
+    "@types/prismjs": "^1.26.3",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.2.0",
     "postcss": "^8.4.35",
+    "prisma": "^5.10.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.0"
   }
